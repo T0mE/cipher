@@ -34,12 +34,3 @@ class Rot47:
     @staticmethod
     def decrypt(text: str) -> str:
         return Rot47.cipher(text)
-
-# x = Rot13()
-#
-# a = x.encrypt("Ala ma Kota")
-# print(a)
-#
-# s = Rot47.encrypt("Ala ma Kota")
-#
-# print(s)

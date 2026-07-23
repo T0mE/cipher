@@ -2,7 +2,6 @@ from facade import Facade
 from menu import Menu
 
 class Manager:
-
     def __init__(self):
         self.facade = Facade()
         self.menu = Menu()

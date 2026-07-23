@@ -23,12 +23,13 @@ class Facade:
     def save_to_file(self, file_name: str) -> None:
         return self.buffer.write_data(file_name)
 
-    def get_buffer(self) -> list[str]:
+    def get_buffer(self) -> list[Data]:
         return self.buffer.read_data()
 
     def load_from_file(self, file_name: str) -> None:
         data = FileHandler.read_file(file_name)
-        self.buffer.add_data(data)
+        for item in data:
+            self.buffer.add_data(Data(text=item['text'],rot_type=item['rot_type'],status=item['status']))
 
 # f = Facade()
 # f.encrypt_rot13("Ala ma kota")
