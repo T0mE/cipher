@@ -8,7 +8,7 @@ class Buffer:
 
     def add_data(self, item: Data) -> None:
         if not isinstance(item, Data):
-            raise TypeError('Data must be Data object.')
+            raise TypeError("Data must be Data object.")
         self.data.append(item)
 
     def read_data(self) -> list[Data]:

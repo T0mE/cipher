@@ -1,5 +1,4 @@
 class Menu:
-
     def show(self) -> None:
         print("1. szyfruj rot13")
         print("2. deszyfruj rot13")

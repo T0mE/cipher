@@ -1,10 +1,10 @@
 import codecs
 
-class Rot13:
 
+class Rot13:
     @staticmethod
     def cipher(text: str) -> str:
-        return codecs.encode(text, 'rot_13')
+        return codecs.encode(text, "rot_13")
 
     @staticmethod
     def encrypt(text: str) -> str:
@@ -16,7 +16,6 @@ class Rot13:
 
 
 class Rot47:
-
     @staticmethod
     def cipher(text: str) -> str:
         chars = []
@@ -25,7 +24,7 @@ class Rot47:
                 chars.append(chr(33 + (ord(c) - 33 + 47) % 94))
             else:
                 chars.append(c)
-        return ''.join(chars)
+        return "".join(chars)
 
     @staticmethod
     def encrypt(text: str) -> str:

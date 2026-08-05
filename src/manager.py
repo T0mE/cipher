@@ -1,5 +1,8 @@
+import sys
+
 from facade import Facade
 from menu import Menu
+
 
 class Manager:
     def __init__(self):
@@ -33,7 +36,7 @@ class Manager:
                     text += ".json"
                 self.facade.save_to_file(text)
             case "8":
-                exit()
+                sys.exit()
             case _:
                 print("błędny wybór")
 
